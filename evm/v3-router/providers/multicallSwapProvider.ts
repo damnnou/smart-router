@@ -4,7 +4,6 @@ import { multicallByGasLimit } from '@pancakeswap/multicall'
 import { BigintIsh } from '@pancakeswap/sdk'
 import stats from 'stats-lite'
 import { PublicClient, decodeFunctionResult, encodeFunctionData } from 'viem'
-import { AbortControl } from '@pancakeswap/utils/abortControl'
 
 import IMulticallABI from '../../abis/InterfaceMulticall'
 import {
@@ -14,6 +13,7 @@ import {
   IMulticallProvider,
   Result,
 } from './multicallProvider'
+import { AbortControl } from '../../utils/abortControl'
 
 export type PancakeMulticallConfig = {
   gasLimitPerCall?: BigintIsh

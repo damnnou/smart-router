@@ -1,5 +1,4 @@
 import { Currency, BigintIsh } from '@pancakeswap/sdk'
-import { AbortControl } from '@pancakeswap/utils/abortControl'
 import { ChainId } from '@pancakeswap/chains'
 import { PublicClient } from 'viem'
 import type { GraphQLClient } from 'graphql-request'
@@ -9,6 +8,7 @@ import { Pool, PoolType } from './pool'
 import { RouteWithoutQuote, RouteWithQuote } from './route'
 import { GasModel } from './gasModel'
 import { BatchMulticallConfigs, ChainMap } from '../../types'
+import { AbortControl } from '../../utils/abortControl'
 
 type GetPoolParams = {
   currencyA?: Currency

@@ -23,6 +23,7 @@
     "dist"
   ],
   "dependencies": {
+    "@cryptoalgebra/integral-sdk": "^0.12.5",
     "@pancakeswap/chains": "0.4.2",
     "@pancakeswap/gauges": "1.2.1",
     "@pancakeswap/multicall": "3.5.1",
