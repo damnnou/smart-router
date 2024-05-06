@@ -44,7 +44,7 @@ export const usdGasTokensByChain = {
   [ChainId.SEPOLIA]: [scrollSepoliaTokens.usdc],
   [ChainId.ARBITRUM_SEPOLIA]: [arbSepoliaTokens.usdc],
   [ChainId.BASE_SEPOLIA]: [baseSepoliaTokens.usdc],
-  [17000]: [holeskyTokens.usdc],
+  [17000]: [holeskyTokens.usdt],
 } satisfies Record<ChainId, Token[]>
 
 export * from './stableSwap'

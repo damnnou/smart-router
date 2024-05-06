@@ -1,14 +1,14 @@
 import { ChainId } from '@pancakeswap/chains'
-import { WNATIVE } from '@pancakeswap/sdk'
 import { Address, PublicClient, getContract } from 'viem'
 import { feeOnTransferDetectorAbi } from './abis/FeeOnTransferDetector'
+import { WNATIVE } from '@pancakeswap/sdk'
 
 export const feeOnTransferDetectorAddresses = {
   [ChainId.ETHEREUM]: '0xe9200516a475b9e6FD4D1c452858097F345A6760',
   [ChainId.SEPOLIA]: '0xD8b14F915b1b4b1c4EE4bF8321Bea018E72E5cf3',
   [ChainId.BSC]: '0x003BD52f589F23346E03fA431209C29cD599d693',
   [ChainId.BSC_TESTNET]: '0xE83BD854c1fBf54424b4d914163BF855aB1131Aa',
-  [ChainId.ARBITRUM_ONE]: '0x',
+  [ChainId.ARBITRUM_ONE]: '0xD8b14F915b1b4b1c4EE4bF8321Bea018E72E5cf3',
   [ChainId.ARBITRUM_SEPOLIA]: '0xD8b14F915b1b4b1c4EE4bF8321Bea018E72E5cf3',
   [ChainId.POLYGON_ZKEVM]: '0xe9200516a475b9e6FD4D1c452858097F345A6760',
   [ChainId.POLYGON_ZKEVM_TESTNET]: '0xbc60A0d9536B6F75b1FfE18b47364ED684EA0260',
@@ -18,6 +18,7 @@ export const feeOnTransferDetectorAddresses = {
   [ChainId.ZKSYNC_TESTNET]: '0x869505373d830104130F95c1E7d578dE7E58C0a8',
   [ChainId.LINEA]: '0xD8b14F915b1b4b1c4EE4bF8321Bea018E72E5cf3',
   [ChainId.LINEA_TESTNET]: '0x3412378f17B1b44E8bcFD157EcE1a4f59DA5A77a',
+  [17000]: '0x'
 } as const
 
 const getFeeOnTransferDetectorContract = <TPublicClient extends PublicClient>(publicClient: TPublicClient) => {

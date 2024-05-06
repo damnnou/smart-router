@@ -1,9 +1,9 @@
 import { BigintIsh, Currency, CurrencyAmount, TradeType } from '@pancakeswap/sdk'
-import { AbortControl } from '@pancakeswap/utils/abortControl'
 
 import { PoolType } from './pool'
 import { PoolProvider, QuoteProvider } from './providers'
 import { Route } from './route'
+import { AbortControl } from '../../utils/abortControl'
 
 export interface SmartRouterTrade<TTradeType extends TradeType> {
   tradeType: TTradeType
