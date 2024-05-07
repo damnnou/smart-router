@@ -9,6 +9,7 @@ import { getV3PoolSubgraph } from './subgraphPoolProviders'
 import { getPairCombinations } from '../../functions'
 import { v3PoolTvlSelector } from './poolTvlSelectors'
 import { getV3PoolsWithoutTicksOnChain } from './onChainPoolProviders'
+import { holeskyTokens } from '../../../constants/holeskyTokens'
 
 // @deprecated
 export type { GetV3PoolsParams as GetV3CandidatePoolsParams }
@@ -96,6 +97,13 @@ const createFallbackTvlRefGetter = () => {
     }
     const res = await fetch(`https://routing-api.pancakeswap.com/v0/v3-pools-tvl/${currencyA.chainId}`)
     const refs: V3PoolTvlReference[] = await res.json()
+    // const refs: V3PoolTvlReference[] = [
+    //   {"address":holeskyTokens.skate.address,"tvlUSD":"463407"},
+    //   {"address":holeskyTokens.usdt.address,"tvlUSD":"811"},
+    //   {"address":holeskyTokens.weth.address,"tvlUSD":"24296785"},
+    //   {"address":holeskyTokens.usdc.address,"tvlUSD":"334258"},
+    //   {"address":"0x069535E4F9a6f603DAEDDA51fbEb30d19FCed89C","tvlUSD":"375"},
+    //   {"address":"0x07a6d7404448567f801D6f8BB82063600176E283","tvlUSD":"7763"}]
     cache.set(currencyA.chainId, refs)
     return refs
   }

@@ -28,6 +28,7 @@ import {
 
 import { ChainMap, ChainTokenList } from '../types'
 import { holeskyTokens } from './holeskyTokens'
+import { ALGEBRA_ROUTER, ROUTER_V2 } from './addresses'
 
 export const SMART_ROUTER_ADDRESSES = {
   [ChainId.ETHEREUM]: '0x13f4EA83D0bd40E75C8222255bc855a974568Dd4',
@@ -50,7 +51,7 @@ export const SMART_ROUTER_ADDRESSES = {
   [ChainId.SEPOLIA]: '0x678Aa4bF4E210cf2166753e054d5b7c31cc7fa86',
   [ChainId.ARBITRUM_SEPOLIA]: '0x678Aa4bF4E210cf2166753e054d5b7c31cc7fa86',
   [ChainId.BASE_SEPOLIA]: '0x678Aa4bF4E210cf2166753e054d5b7c31cc7fa86',
-  [17000]: '0x16AB999fb9f1fF6633c2b6b1C707721377887921',
+  [17000]: ALGEBRA_ROUTER,
 } as const satisfies Record<ChainId, string>
 
 export const V2_ROUTER_ADDRESS: ChainMap<string> = {
@@ -74,7 +75,7 @@ export const V2_ROUTER_ADDRESS: ChainMap<string> = {
   [ChainId.SEPOLIA]: '0x8cFe327CEc66d1C090Dd72bd0FF11d690C33a2Eb',
   [ChainId.ARBITRUM_SEPOLIA]: '0x8cFe327CEc66d1C090Dd72bd0FF11d690C33a2Eb',
   [ChainId.BASE_SEPOLIA]: '0x8cFe327CEc66d1C090Dd72bd0FF11d690C33a2Eb',
-  [17000]: '0xeB0DAADf31cC744736471520fdc767e7681945b3',
+  [17000]: ROUTER_V2,
 }
 
 export const STABLE_SWAP_INFO_ADDRESS: ChainMap<string> = {
